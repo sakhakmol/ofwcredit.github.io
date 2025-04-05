@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    	<title>Dashboard - creditofwloan</title>
+    <meta name="author" content="KS">
+    <meta name="keywords" itemprop="keywords" content="ZALORA">
+    <meta name="description" itemprop="description" content="ZALORA">
+    <meta name="csrf-token" content="bOjm4sOAA0HBdVvORwfq4f5osGJzv6MWN27R7cSL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://admin.creditofwloan.com/admin-asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://admin.creditofwloan.com/admin-asset/css/font-awesome.min.css">
+    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://admin.creditofwloan.com/admin-asset/css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://admin.creditofwloan.com/admin-asset/css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://admin.creditofwloan.com/admin-asset/css/smartadmin-skins.min.css">
+
+    <!-- SmartAdmin RTL Support -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://admin.creditofwloan.com/admin-asset/css/smartadmin-rtl.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://admin.creditofwloan.com/admin-asset/css/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://admin.creditofwloan.com/admin-asset/css/your_style.css">
+
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://admin.creditofwloan.com/admin-asset/css/demo.min.css">
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="https://admin.creditofwloan.com/favicon.ico" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Battambang&family=Roboto:wght@300&family=Open+Sans:400italic,700italic,300,400,700">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@200;900&display=swap" rel="stylesheet"> -->
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!--================================================== -->
+
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+    <script data-pace-options='{ "restartOnRequestAfter": true }'
+        src="https://admin.creditofwloan.com/admin-asset/js/plugin/pace/pace.min.js"></script>
+
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="https://admin.creditofwloan.com/js/libs/jquery-2.1.1.min.js"><\/script>');
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+        if (!window.jQuery.ui) {
+            document.write('<script src="https://admin.creditofwloan.com/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+        }
+    </script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SmartChat UI : plugin -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/smart-chat-ui/smart.chat.ui.min.js"></script>
+    <script src="https://admin.creditofwloan.com/admin-asset/js/smart-chat-ui/smart.chat.manager.min.js"></script>
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/chartjs/chart.min.js"></script>
+    <!-- PAGE RELATED PLUGIN(S) -->
+    <script src="https://admin.creditofwloan.com/admin-asset/templateEditor/ckeditor/ckeditor.js"></script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/notification/SmartNotification.min.js"></script>
+
+    <!-- JARVIS WIDGETS -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/smartwidgets/jarvis.widget.min.js"></script>
+
+    <!-- EASY PIE CHARTS -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+    <!-- SPARKLINES -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- JQUERY VALIDATE -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+    <!-- browser msie issue fix -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+    <script type="text/javascript" src="https://admin.creditofwloan.com/admin-asset/js/plugin/bootstrap-tags/bootstrap-tagsinput.min.js">
+    </script>
+    <!-- FastClick: For mobile devices -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/plugin/fastclick/fastclick.min.js"></script>
+        	<title>Dashboard - creditofwloan</title>
+</head>
+
+<body class="">
+
+    <!-- HEADER -->
+    <header id="header">
+        <div id="logo-group">
+
+            <!-- PLACE YOUR LOGO HERE -->
+            <span id="logo" style="margin: 0px;line-height: 50px;margin-left: 10px;"> <img
+                    src="https://admin.creditofwloan.com/no-bg-logo.png" alt="Logo" style="height:50px;"> </span>
+
+        </div>
+        <div class="project-context open">
+            <span class="label"></span>
+        </div>
+        <!-- end projects dropdown -->
+
+
+        <!-- pulled right: nav area -->
+        <div class="pull-right">
+
+            <div id="hide-menu" class="btn-header pull-right">
+            </div>
+            <!-- collapse menu button -->
+            <div id="hide-menu" class="btn-header pull-right">
+                <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i
+                            class="fa fa-reorder"></i></a> </span>
+            </div>
+
+
+            <!-- end collapse menu -->
+
+            <!-- #MOBILE -->
+            <!-- Top menu profile link : this shows only when top menu is active -->
+            <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+                <li class="">
+                    <ul class="dropdown-menu pull-right">
+
+                        <li>
+                            <a href="#" class="padding-10 padding-top-0 padding-bottom-0"> <i
+                                    class="fa fa-user"></i> <u>P</u>rofile</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0"
+                                data-action="launchFullscreen"><i class="fa fa-arrows-alt"></i> Full <u>S</u>creen</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" class="padding-10 padding-top-5 padding-bottom-5"
+                                data-action="userLogout"><i class="fa fa-sign-out fa-lg"></i>
+                                <strong><u>L</u>ogout</strong></a>
+                            <!-- logout in app.min.js| $('#logout-form').submit(); -->
+                            <form id="logout-form" action="https://admin.creditofwloan.com/logout" method="POST"
+                                style="display: none;">
+                                <input type="hidden" name="_token" value="bOjm4sOAA0HBdVvORwfq4f5osGJzv6MWN27R7cSL">                            </form>
+
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- logout button -->
+            <div id="logout" class="btn-header transparent pull-right">
+                <span> <a href="#" title="Sign Out" data-action="userLogout"
+                        data-logout-msg="Do you want to logout?"><i class="fa fa-sign-out"></i></a> </span>
+            </div>
+            <!-- end logout button -->
+
+            <!-- search mobile button (this is hidden till mobile view port) -->
+            <!-- <div id="search-mobile" class="btn-header transparent pull-right">
+          <span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
+        </div> -->
+            <!-- end search mobile button -->
+
+            <!-- input: search field -->
+            <!-- <form action="search.html" class="header-search pull-right">
+          <input id="search-fld"  type="text" name="param" placeholder="Find">
+          <button type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+          <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+        </form> -->
+            <!-- end input: search field -->
+
+            <!-- fullscreen button -->
+            <!-- <div id="fullscreen" class="btn-header transparent pull-right">
+          <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a> </span>
+        </div> -->
+            <!-- end fullscreen button -->
+
+            <div id="arrilot-widget-container-1" style="display:inline" class="arrilot-widget-container"><div class="header-search pull-right">
+
+  <a href="https://admin.creditofwloan.com/admin/transactions?status=new">
+    <div style="background-color:#282a35;height:50px;color:white;text-align:center;font-weight: bold;padding:15px 10px;float:right;margin-left:1px;">
+      New Withdrawal  <b class="badge bg-color-red bounceIn animated"> 9</b>     </div>
+  </a>
+  <a href="https://admin.creditofwloan.com/admin/loans?status=new">
+    <div style="background-color:#282a35;height:50px;color:white;text-align:center;font-weight: bold;padding:15px 10px;float:right;margin-left:1px;">
+      New Loan   <b class="badge bg-color-red bounceIn animated"> 53 </b>     </div>
+  </a>
+  
+  <a href="https://admin.creditofwloan.com/admin/members?status=new">
+    <div style="background-color:#282a35;height:50px;color:white;text-align:center;font-weight: bold;padding:15px 10px;float:right;margin-left:1px;">
+      New Member  <b class="badge bg-color-red bounceIn animated"> 171 </b>     </div>
+  </a>
+</div><script type="text/javascript">setTimeout( function() {setTimeout(function() {var xhr = new XMLHttpRequest();xhr.open("GET", "/arrilot/load-widget?id=1&name=Notifications&params=eyJpdiI6IjRZL0FMT3greVJsOXdqUzJpN0tWSkE9PSIsInZhbHVlIjoiUXVnUGRtaFVqUkdsK2FjV0JUcEE5QT09IiwibWFjIjoiOTAyNWE5OWNhNWU3YzkxZTNkZWZhYzBmMDg4ZjQ1ODU1NDg0MjU0Zjg5ODI0ZGUzYjA5MzM5ZjFjNzk3MWNkMiIsInRhZyI6IiJ9", true);xhr.onreadystatechange = function() {if(xhr.readyState == 4 && xhr.status == 200) {var container = document.getElementById("arrilot-widget-container-1");container.innerHTML = xhr.responseText;var scripts = container.getElementsByTagName("script");for(var i=0; i < scripts.length; i++) {if (window.execScript) {window.execScript(scripts[i].text);} else {window["eval"].call(window, scripts[i].text);}}}};xhr.send();}, 0);}, 10000)</script></div>
+        </div>
+        <!-- end pulled right: nav area -->
+
+        <!-- multiple lang dropdown : find all flags in the flags page -->
+        <ul class="header-dropdown-list ">
+            <li>
+                <a href="#" class="dropdown-toggle " data-toggle="dropdown">
+                                        <li >
+                        <a href="/lang/th"><img src="https://admin.creditofwloan.com/th.png" class="flag" alt="ไทย">
+                        ไทย</a>
+                    </li>
+                    
+                    
+                </a>
+                
+            </li>
+        </ul>
+        
+        <!-- end multiple lang -->
+    </header>
+    <!-- END HEADER -->
+
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel">
+
+        <!-- User info -->
+        <div class="login-info">
+            <span title="Edit Your Profile" style="padding-top:7px;">
+                <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+                <a href="https://admin.creditofwloan.com/admin/users/1/edit" id="show-shortcut">
+                    <span>
+                        Admin
+                    </span>
+                </a>
+            </span>
+        </div>
+        <!-- end user info -->
+
+        <!-- NAVIGATION : This navigation is also responsive-->
+        <nav>
+            <ul>
+                
+                <li class="active">
+                    <a href="https://admin.creditofwloan.com/admin" title="Dashboard">
+                        <i class="fa fa-lg fa-fw fa-dashboard fa-lg"></i>
+                        Dashboard
+                        </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://admin.creditofwloan.com/admin/members"
+                        title=" All Member">
+                        <i class="fa fa-lg fa-fw fa-users fa-lg"></i>
+                        All Member
+                        </span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="https://admin.creditofwloan.com/admin/loans" title="Borrowing List">
+                        <i class="fa fa-lg fa-fw fa-book fa-lg"></i>
+                        Borrowing List
+                        </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://admin.creditofwloan.com/admin/transactions" title="Withdrawal List">
+                        <i class="fa fa-lg fa-fw fa-money fa-lg"></i>
+                        Withdrawal List
+                        </span>
+                    </a>
+                </li>
+                                    <li class="">
+                        <a href="https://admin.creditofwloan.com/admin/slides" title="Slide">
+                            <i class="fa fa-lg fa-fw fa-sliders fa-lg"></i>
+                            Slide
+                            </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://admin.creditofwloan.com/admin/order-statuses"
+                            title="Order Status">
+                            <i class="fa fa-lg fa-fa fas fa-shopping-cart fa-lg"></i>
+                            Order Status
+                            </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://admin.creditofwloan.com/admin/users" title="User List">
+                            <i class="fa fa-lg fa-fw fa-user fa-lg"></i>
+                            User List
+                            </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://admin.creditofwloan.com/admin/settings" title="Setting"><i
+                                class="fa fa-lg fa-fw fa-cog"></i><span
+                                class="menu-item-parent">Setting</span></a>
+                    </li>
+                                <li style="color:red">
+                    <a href="#" style="color:red" onclick="document.getElementById('logout-form').submit();" title="Logout">
+                        <i class="fa fa-sign-out"></i>
+                        <span class="menu-item-parent">Logout</span></a>
+                </li>
+                <form id="logout-form" action="https://admin.creditofwloan.com/logout" method="POST" style="display: none;">
+                    <input type="hidden" name="_token" value="bOjm4sOAA0HBdVvORwfq4f5osGJzv6MWN27R7cSL">                </form>
+            </ul>
+            </li>
+
+
+            </ul>
+        </nav>
+        <span class="minifyme" data-action="minifyMenu">
+            <i class="fa fa-lg fa-fw fa-arrow-circle-left hit"></i>
+        </span>
+
+    </aside>
+    <!-- END NAVIGATION -->
+
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+
+            <span class="ribbon-button-alignment">
+                <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"
+                    rel="tooltip" data-placement="bottom"
+                    data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings."
+                    data-html="true">
+                    <i class="fa fa-refresh"></i>
+                </span>
+            </span>
+
+            <!-- breadcrumb -->
+            <ol class="breadcrumb">
+            </ol>
+            <!-- end breadcrumb -->
+
+        </div>
+        <!-- END RIBBON -->
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
+                        
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+  <!-- row -->
+  <div class="row">
+
+    <!-- NEW WIDGET START -->
+    
+    <div class="col-md-12" style="margin-bottom: 30px;">
+	     <form method="get" id="search-form">
+	      <div class="rows">
+	      	<div class="col-md-1 col-xs-4" style="margin-top:10px;font-weight: bold;">
+				Start Date 
+	      	</div>
+	        <div class="col-md-2 col-xs-8">
+	            <input type="text" id="datepicker_start" class="form-control" name="start_date" title="Start Date" value="2025-03-31" placeholder="Start Date" readonly="">
+	        </div>
+	        <div class="col-md-1 col-xs-4" style="margin-top:10px;font-weight: bold;">
+	      		End Date
+	      	</div>
+	        <div class="col-md-2 col-xs-8">
+	            <input type="text" id="datepicker_end" class="form-control" name="end_date" title="End Date" value="2025-03-31" placeholder="End Date" readonly="">
+	        </div>          
+	      </div>
+	      
+	      <div class="rows">          
+	        <div class="col-md-3 col-xs-12" style="padding-bottom:10px;">
+	            <button type="submit" class="btn btn-primary">
+	              <i class="fa fa-search"></i>
+				  Search
+
+	            </button>
+	            <a href="https://admin.creditofwloan.com/admin" type="reset" class="btn">
+	              <i class="fa fa-refresh"></i>
+	              <span class="hidden-xs"> Refresh</span>
+	            </a>
+	        </div>
+	      </div>
+	      <div class="col-sm-12 col-xs-12">
+	        <button type="button" class="btn btn-primary search-date" id="today">
+					<i class="fa fa-calendar"></i>
+					Today
+					</button>
+					<button type="button" class="btn btn-primary search-date" id="yesterday">
+					<i class="fa fa-calendar"></i>
+					Yesterday
+					</button>
+					<button type="button" class="btn btn-primary search-date" id="this-week">
+					<i class="fa fa-calendar"></i>
+					This Week
+					</button>
+					<button type="button" class="btn btn-primary search-date" id="last-week">
+					<i class="fa fa-calendar"></i>
+					Last Week
+					</button>
+					<button type="button" class="btn btn-primary search-date" id="this-month">
+					<i class="fa fa-calendar"></i>
+					This Month
+					</button>
+					<button type="button" class="btn btn-primary search-date" id="last-month">
+					<i class="fa fa-calendar"></i>
+					Last Month
+					</button>               
+	      </div>
+	    </form>
+	</div>
+    
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+          <div class="row">
+
+			<div class="col-sm-4">
+
+				<div class="well well-sm bg-color-darken txt-color-white text-center" style="box-shadow: 0px 1px 5px 0px #000000;">
+					<h5>
+						<i class="fa fa-lg fa-fw fa-user fa-lg"></i>
+						Member Registered
+					</h5>
+					<h1 style="font-weight:bold;font-size: 50px;">0</h1>
+					
+				</div>
+
+			</div>
+
+			<div class="col-sm-4">
+
+				<div class="well well-sm bg-color-teal txt-color-white text-center" style="box-shadow: 0px 1px 5px 0px #000000;">
+					<h5>Loan Applied</h5>
+					<h1 style="font-weight:bold;font-size: 50px;">0</h1>
+				</div>
+
+			</div>
+
+			<div class="col-sm-4">
+
+				<div class="well well-sm bg-color-pinkDark txt-color-white text-center" style="box-shadow: 0px 1px 5px 0px #000000;">
+					<h5>Landing Amount</h5>
+					<h1 style="font-weight:bold;font-size: 50px;">0.00</h1>
+				</div>
+
+			</div>
+
+		</div>
+    </article>
+  </div>
+
+  <!-- end row -->
+
+  
+
+  <!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+        </div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <!-- PAGE FOOTER -->
+    <div class="page-footer clearfix">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <span class="txt-color-white">Admin<span class="hidden-xs"> - LOAN SYSTEM </span> ©
+                    2021-2025</span>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 text-right hidden-xs">
+                <div class="txt-color-white inline-block">
+                    <i class="txt-color-blueLight hidden-mobile">
+                        LOAN SYSTEM
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE FOOTER -->
+    <!-- IMPORTANT: APP CONFIG -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/app.config.js"></script>
+
+    <!--[if IE 8]>
+
+    <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+    <![endif]-->
+
+    <!-- Demo purpose only -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/demo.min.js"></script>
+
+    <!-- MAIN APP JS FILE -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/app.min.js"></script>
+
+    <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+    <!-- Voice command : plugin -->
+    <script src="https://admin.creditofwloan.com/admin-asset/js/speech/voicecommand.min.js"></script>
+
+
+    <script src="https://admin.creditofwloan.com/admin-asset/js/custom.js"></script>
+
+
+      <script>
+  $( function() {
+    $( "#datepicker_start" ).datepicker({ dateFormat: 'yy-mm-d',maxDate: '0' });
+    $( "#datepicker_end" ).datepicker({ dateFormat: 'yy-mm-d',maxDate: '0' });
+  } );
+  </script>
+
+</body>
+<style type="text/css">
+    .ui-datepicker-prev span,
+    .ui-datepicker-next span {
+        background-image: none !important;
+    }
+
+    .ui-datepicker-prev:before,
+    .ui-datepicker-next:before {
+        font-family: FontAwesome;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        font-weight: normal;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ui-datepicker-prev:before {
+        content: "\f100";
+    }
+
+    .ui-datepicker-next:before {
+        content: "\f101";
+    }
+
+    .no-btn {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+    }
+
+    .fa-trash-o {
+        color: #A52A2A;
+    }
+
+    .action {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    label {
+        font-weight: bold !important;
+    }
+
+    .fa.fa-check {
+        margin-right: 5px;
+        color: #00da00 !important;
+    }
+</style>
+<script type="text/javascript">
+    // // change language
+    // $(".change-language").change(function(){
+    //    window.location.replace("https://admin.creditofwloan.com/locale/"+$('.change-language option:selected').val());
+    // });
+
+    // CKEDITOR.replace('description' );
+    // CKEDITOR.replace('requirement' );
+    // CKEDITOR.replace('notes' );
+    var tableWidth = document.querySelector('table.table:nth-child(1)').offsetWidth;
+
+    var tableOffset = $("table.table:nth-child(1)").offset().top;
+    var $header = $("table.table:nth-child(1) thead").clone();
+    var $fixedHeader = $("#header-fixed").append($header);
+    $("#header-fixed").css("width", tableWidth + 'px');
+
+    $fixedHeader.find('td, th').each(function(index) {
+        var width = document.querySelector("table.table").rows[0].cells[index].offsetWidth;
+        this.width = width;
+    });
+    $(window).bind("scroll", function() {
+        var offset = $(this).scrollTop();
+        if (offset >= tableOffset && $fixedHeader.is(":hidden")) {
+            $fixedHeader.show();
+        } else if (offset < tableOffset) {
+            $fixedHeader.hide();
+        }
+    });
+    $(window).resize(function() {
+        var w = $(".persist-header").width();
+        $(".floatingHeader").width(w);
+    });
+</script>
+<style type="text/css">
+    hr {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+
+</html>

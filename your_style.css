@@ -1,0 +1,94 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the 
+ * later versions of this theme. 
+ * 
+ * We advise that you use use this CSS to override 
+ * SmartAdmin styles. 
+ * 
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ * 
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+ body{
+  font-family: 'Battambang', 'Noto Serif Thai', Roboto !important;
+}
+
+.my-small-image{
+  max-width:200px !important;
+}
+.hide-element{
+  display: none;
+}
+
+.unpaid{
+ color:#b44343;
+ font-weight: bold;
+ border:2px solid #b44343;
+ padding:10px;
+ font-size:20px;
+}
+.paid{
+ color:#00bf00;
+ font-weight: bold;
+ border:2px solid #00bf00;
+ padding:10px;
+ font-size:20px;
+}
+.more-images{
+ width:100%;
+ background-color: #129fe4;
+ color: #335fb2;
+ font-size: 20px;
+ font-weight: bold;
+ text-align: center;
+ padding:10px;
+ margin:10px;
+}
+.form-title{
+ text-align: left;
+ color:#1e90ff;
+ font-weight: 500;
+ margin-left:-15px;
+}
+.disabled-row{
+ background-color: #faebd7;
+ cursor: not-allowed;
+}
+
+#sparks li h5{
+ margin: 0;
+}
+.credit{
+ color:#0a6778;
+ font-weight: bold;
+}
+.jarviswidget-color-blueDark .nav-tabs li:not(.active) a, .jarviswidget-color-blueDark>header>.jarviswidget-ctrls a{
+ color:black !important;
+}
+.shadow{
+ -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.62);
+-moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.62);
+box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.62);
+}
+.status::first-letter {
+   text-transform: uppercase;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+   padding:none;
+}
+#header-fixed {
+   position: fixed;
+   top: 0px;
+   display: none;
+   background-color: white;
+   z-index: 1  ;
+ }
